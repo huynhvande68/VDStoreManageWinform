@@ -7,7 +7,7 @@ namespace VDStore.DAL
 {
     public class DbConnection
     {
-        private static readonly string connectionString = ConfigurationManager.ConnectionStrings["PiStoreConnection"].ConnectionString;
+        private static readonly string connectionString = ConfigurationManager.ConnectionStrings["VDStoreConnection"].ConnectionString;
 
         public static SqlConnection GetConnection()
         {

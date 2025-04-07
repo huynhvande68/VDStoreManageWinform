@@ -107,17 +107,17 @@ Quản lý hàng tồn kho với module này:
 - Đảm bảo bạn có quyền truy cập SQL Server thích hợp
 
 ### Vấn đề đăng nhập
-- Thông tin đăng nhập admin mặc định là tên đăng nhập: `admin`, mật khẩu: `admin`
-- Thông tin đăng nhập nhân viên mặc định là tên đăng nhập: `nhanvien1`, mật khẩu: `123456`
+- Thông tin đăng nhập admin mặc định là tên đăng nhập: `admin`, mật khẩu: `admin123`
 - Nếu quên mật khẩu, bạn có thể đặt lại trong SQL Server với câu lệnh:
   ```sql
   UPDATE [User] SET Password = 'admin123' WHERE Username = 'admin'
   ```
 
 ### Người phát triển
-Dự án này được phát triển bởi Huỳnh Văn Đệ.
+Dự án này được phát triển bởi [Tên của bạn/nhóm].
 
-Liên hệ: huynhvande2k2@gmail.com
+Liên hệ: [Email/Thông tin liên hệ của bạn]
 
 ---
 
+© 2023 VDStore. Bảo lưu mọi quyền. 

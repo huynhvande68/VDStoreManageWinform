@@ -228,8 +228,10 @@ namespace VDStore.Forms
             this.btnExportBillsCsv.Name = "btnExportBillsCsv";
             this.btnExportBillsCsv.Size = new System.Drawing.Size(120, 23);
             this.btnExportBillsCsv.TabIndex = 7;
-            this.btnExportBillsCsv.Text = "Export Bills to CSV";
+            this.btnExportBillsCsv.Text = "Export to CSV";
             this.btnExportBillsCsv.UseVisualStyleBackColor = true;
+            this.btnExportBillsCsv.BackColor = System.Drawing.Color.DarkSeaGreen;
+
             this.btnExportBillsCsv.Click += new System.EventHandler(this.BtnExportBillsCsv_Click);
             // 
             // btnExportItemsCsv
@@ -517,7 +519,7 @@ namespace VDStore.Forms
                     
                     // Add title
                     Font titleFont = FontFactory.GetFont(FontFactory.HELVETICA, 18, 1, BaseColor.BLACK);
-                    Paragraph title = new Paragraph("PI STORE BILL", titleFont);
+                    Paragraph title = new Paragraph("VD STORE BILL", titleFont);
                     title.Alignment = Element.ALIGN_CENTER;
                     title.SpacingAfter = 20f;
                     document.Add(title);

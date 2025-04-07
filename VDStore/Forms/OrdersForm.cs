@@ -6,6 +6,7 @@ using VDStore.Models;
 using System.Linq;
 using System.IO;
 using System.Text;
+using System.Drawing;
 
 namespace VDStore.Forms
 {
@@ -29,6 +30,7 @@ namespace VDStore.Forms
             this.grpOrderList = new System.Windows.Forms.GroupBox();
             this.dgvOrders = new System.Windows.Forms.DataGridView();
             this.grpSearch = new System.Windows.Forms.GroupBox();
+            this.btnExportOrdersCsv = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.lblEndDate = new System.Windows.Forms.Label();
@@ -39,12 +41,16 @@ namespace VDStore.Forms
             this.grpOrderDetails = new System.Windows.Forms.GroupBox();
             this.dgvOrderItems = new System.Windows.Forms.DataGridView();
             this.btnGenerateBill = new System.Windows.Forms.Button();
-            this.btnExportOrdersCsv = new System.Windows.Forms.Button();
+            this.grpOrderStatus = new System.Windows.Forms.GroupBox();
+            this.cboStatus = new System.Windows.Forms.ComboBox();
+            this.lblStatus = new System.Windows.Forms.Label();
+            this.btnUpdateStatus = new System.Windows.Forms.Button();
             this.grpOrderList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrders)).BeginInit();
             this.grpSearch.SuspendLayout();
             this.grpOrderDetails.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).BeginInit();
+            this.grpOrderStatus.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpOrderList
@@ -52,6 +58,7 @@ namespace VDStore.Forms
             this.grpOrderList.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpOrderList.Controls.Add(this.dgvOrders);
+            this.grpOrderList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpOrderList.Location = new System.Drawing.Point(12, 94);
             this.grpOrderList.Name = "grpOrderList";
             this.grpOrderList.Size = new System.Drawing.Size(934, 179);
@@ -88,6 +95,7 @@ namespace VDStore.Forms
             this.grpSearch.Controls.Add(this.lblStartDate);
             this.grpSearch.Controls.Add(this.cboClient);
             this.grpSearch.Controls.Add(this.lblClient);
+            this.grpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpSearch.Location = new System.Drawing.Point(12, 12);
             this.grpSearch.Name = "grpSearch";
             this.grpSearch.Size = new System.Drawing.Size(934, 76);
@@ -95,14 +103,28 @@ namespace VDStore.Forms
             this.grpSearch.TabStop = false;
             this.grpSearch.Text = "Search";
             // 
+            // btnExportOrdersCsv
+            // 
+            this.btnExportOrdersCsv.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnExportOrdersCsv.Location = new System.Drawing.Point(771, 29);
+            this.btnExportOrdersCsv.Name = "btnExportOrdersCsv";
+            this.btnExportOrdersCsv.Size = new System.Drawing.Size(140, 24);
+            this.btnExportOrdersCsv.TabIndex = 13;
+            this.btnExportOrdersCsv.Text = "Export to CSV";
+            this.btnExportOrdersCsv.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnExportOrdersCsv.UseVisualStyleBackColor = false;
+            this.btnExportOrdersCsv.Click += new System.EventHandler(this.BtnExportOrdersCsv_Click);
+            // 
             // btnSearch
             // 
+            this.btnSearch.BackColor = System.Drawing.SystemColors.Window;
+            this.btnSearch.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnSearch.Location = new System.Drawing.Point(671, 29);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 6;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // dtpEndDate
@@ -110,7 +132,7 @@ namespace VDStore.Forms
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpEndDate.Location = new System.Drawing.Point(524, 29);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(120, 20);
+            this.dtpEndDate.Size = new System.Drawing.Size(120, 21);
             this.dtpEndDate.TabIndex = 5;
             // 
             // lblEndDate
@@ -118,7 +140,7 @@ namespace VDStore.Forms
             this.lblEndDate.AutoSize = true;
             this.lblEndDate.Location = new System.Drawing.Point(465, 33);
             this.lblEndDate.Name = "lblEndDate";
-            this.lblEndDate.Size = new System.Drawing.Size(55, 13);
+            this.lblEndDate.Size = new System.Drawing.Size(61, 15);
             this.lblEndDate.TabIndex = 4;
             this.lblEndDate.Text = "End Date:";
             // 
@@ -127,7 +149,7 @@ namespace VDStore.Forms
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpStartDate.Location = new System.Drawing.Point(342, 29);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(117, 20);
+            this.dtpStartDate.Size = new System.Drawing.Size(117, 21);
             this.dtpStartDate.TabIndex = 3;
             // 
             // lblStartDate
@@ -135,7 +157,7 @@ namespace VDStore.Forms
             this.lblStartDate.AutoSize = true;
             this.lblStartDate.Location = new System.Drawing.Point(280, 33);
             this.lblStartDate.Name = "lblStartDate";
-            this.lblStartDate.Size = new System.Drawing.Size(58, 13);
+            this.lblStartDate.Size = new System.Drawing.Size(64, 15);
             this.lblStartDate.TabIndex = 2;
             this.lblStartDate.Text = "Start Date:";
             // 
@@ -145,7 +167,7 @@ namespace VDStore.Forms
             this.cboClient.FormattingEnabled = true;
             this.cboClient.Location = new System.Drawing.Point(59, 30);
             this.cboClient.Name = "cboClient";
-            this.cboClient.Size = new System.Drawing.Size(200, 21);
+            this.cboClient.Size = new System.Drawing.Size(200, 23);
             this.cboClient.TabIndex = 1;
             // 
             // lblClient
@@ -153,7 +175,7 @@ namespace VDStore.Forms
             this.lblClient.AutoSize = true;
             this.lblClient.Location = new System.Drawing.Point(19, 33);
             this.lblClient.Name = "lblClient";
-            this.lblClient.Size = new System.Drawing.Size(36, 13);
+            this.lblClient.Size = new System.Drawing.Size(41, 15);
             this.lblClient.TabIndex = 0;
             this.lblClient.Text = "Client:";
             // 
@@ -164,6 +186,7 @@ namespace VDStore.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpOrderDetails.Controls.Add(this.dgvOrderItems);
             this.grpOrderDetails.Controls.Add(this.btnGenerateBill);
+            this.grpOrderDetails.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpOrderDetails.Location = new System.Drawing.Point(12, 279);
             this.grpOrderDetails.Name = "grpOrderDetails";
             this.grpOrderDetails.Size = new System.Drawing.Size(934, 159);
@@ -188,29 +211,68 @@ namespace VDStore.Forms
             // btnGenerateBill
             // 
             this.btnGenerateBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenerateBill.BackColor = System.Drawing.Color.IndianRed;
+            this.btnGenerateBill.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnGenerateBill.Location = new System.Drawing.Point(829, 19);
             this.btnGenerateBill.Name = "btnGenerateBill";
-            this.btnGenerateBill.Size = new System.Drawing.Size(99, 23);
+            this.btnGenerateBill.Size = new System.Drawing.Size(99, 26);
             this.btnGenerateBill.TabIndex = 0;
             this.btnGenerateBill.Text = "Generate Bill";
-            this.btnGenerateBill.UseVisualStyleBackColor = true;
+            this.btnGenerateBill.UseVisualStyleBackColor = false;
             this.btnGenerateBill.Click += new System.EventHandler(this.btnGenerateBill_Click);
             // 
-            // btnExportOrdersCsv
+            // grpOrderStatus
             // 
-            this.btnExportOrdersCsv.Location = new System.Drawing.Point(771, 29);
-            this.btnExportOrdersCsv.Name = "btnExportOrdersCsv";
-            this.btnExportOrdersCsv.Size = new System.Drawing.Size(140, 22);
-            this.btnExportOrdersCsv.TabIndex = 13;
-            this.btnExportOrdersCsv.Text = "Export to CSV";
-            this.btnExportOrdersCsv.UseVisualStyleBackColor = true;
-            this.btnExportOrdersCsv.Click += new System.EventHandler(this.BtnExportOrdersCsv_Click);
+            this.grpOrderStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.grpOrderStatus.Controls.Add(this.cboStatus);
+            this.grpOrderStatus.Controls.Add(this.lblStatus);
+            this.grpOrderStatus.Controls.Add(this.btnUpdateStatus);
+            this.grpOrderStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpOrderStatus.Location = new System.Drawing.Point(12, 444);
+            this.grpOrderStatus.Name = "grpOrderStatus";
+            this.grpOrderStatus.Size = new System.Drawing.Size(401, 65);
+            this.grpOrderStatus.TabIndex = 3;
+            this.grpOrderStatus.TabStop = false;
+            this.grpOrderStatus.Text = "Update Order Status";
+            // 
+            // cboStatus
+            // 
+            this.cboStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboStatus.FormattingEnabled = true;
+            this.cboStatus.Items.AddRange(new object[] {
+            "Active",
+            "Completed",
+            "Cancelled"});
+            this.cboStatus.Location = new System.Drawing.Point(69, 24);
+            this.cboStatus.Name = "cboStatus";
+            this.cboStatus.Size = new System.Drawing.Size(200, 23);
+            this.cboStatus.TabIndex = 1;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Location = new System.Drawing.Point(19, 27);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(44, 15);
+            this.lblStatus.TabIndex = 0;
+            this.lblStatus.Text = "Status:";
+            // 
+            // btnUpdateStatus
+            // 
+            this.btnUpdateStatus.Location = new System.Drawing.Point(284, 23);
+            this.btnUpdateStatus.Name = "btnUpdateStatus";
+            this.btnUpdateStatus.Size = new System.Drawing.Size(102, 25);
+            this.btnUpdateStatus.TabIndex = 2;
+            this.btnUpdateStatus.Text = "Update Status";
+            this.btnUpdateStatus.UseVisualStyleBackColor = true;
+            this.btnUpdateStatus.Click += new System.EventHandler(this.btnUpdateStatus_Click);
             // 
             // OrdersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(958, 450);
+            this.ClientSize = new System.Drawing.Size(958, 521);
+            this.Controls.Add(this.grpOrderStatus);
             this.Controls.Add(this.grpOrderDetails);
             this.Controls.Add(this.grpSearch);
             this.Controls.Add(this.grpOrderList);
@@ -223,6 +285,8 @@ namespace VDStore.Forms
             this.grpSearch.PerformLayout();
             this.grpOrderDetails.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderItems)).EndInit();
+            this.grpOrderStatus.ResumeLayout(false);
+            this.grpOrderStatus.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -241,24 +305,29 @@ namespace VDStore.Forms
         private System.Windows.Forms.Button btnGenerateBill;
         private System.Windows.Forms.DataGridView dgvOrderItems;
         private System.Windows.Forms.Button btnExportOrdersCsv;
+        private System.Windows.Forms.GroupBox grpOrderStatus;
+        private System.Windows.Forms.ComboBox cboStatus;
+        private System.Windows.Forms.Label lblStatus;
+        private System.Windows.Forms.Button btnUpdateStatus;
 
         private void OrdersForm_Load(object sender, EventArgs e)
         {
-            // Load clients for dropdown
+            // Set default dates to 30 days range
+            dtpStartDate.Value = DateTime.Now.AddDays(-30);
+            dtpEndDate.Value = DateTime.Now;
+            
+            // Load clients for filter dropdown
             LoadClients();
             
-            // Setup date range (default to last 30 days)
-            dtpEndDate.Value = DateTime.Now;
-            dtpStartDate.Value = DateTime.Now.AddDays(-30);
-            
-            // Load orders
+            // Load initial orders
             LoadOrders();
             
             // Setup order items grid
             SetupOrderItemsGrid();
             
-            // Disable generate bill button until an order is selected
-            btnGenerateBill.Enabled = false;
+            // Disable the update status controls until an order is selected
+            cboStatus.SelectedIndex = 0;
+            grpOrderStatus.Enabled = false;
         }
 
         private void LoadClients()
@@ -287,69 +356,88 @@ namespace VDStore.Forms
         {
             try
             {
-                // Get the selected client ID
-                int clientId = Convert.ToInt32(cboClient.SelectedValue);
+                // Get selected client ID if any
+                int clientId = 0;
+                if (cboClient.SelectedItem != null && cboClient.SelectedIndex > 0)
+                {
+                    clientId = ((Client)cboClient.SelectedItem).ID;
+                }
                 
-                // Get the date range
+                // Get date range
                 DateTime startDate = dtpStartDate.Value.Date;
-                DateTime endDate = dtpEndDate.Value.Date.AddDays(1).AddSeconds(-1); // End of day
+                DateTime endDate = dtpEndDate.Value.Date.AddDays(1).AddSeconds(-1); // End of the day
                 
+                // Load orders based on filter
                 if (clientId > 0)
                 {
-                    // Load orders for specific client
                     orders = OrderDAL.GetOrdersByClientID(clientId);
                 }
                 else
                 {
-                    // Load all orders within date range
                     orders = OrderDAL.SearchOrdersByDateRange(startDate, endDate);
                 }
                 
-                // First create a bindable list for the grid
-                var bindableOrders = new List<object>();
-                foreach(var order in orders)
-                {
-                    bindableOrders.Add(new
-                    {
-                        order.ID,
-                        order.OrderDate,
-                        ClientName = order.Client.Name,
-                        EmployeeName = order.Employee.Name,
-                        order.TotalPrice,
-                        order.ClientID,
-                        order.EmployeeID
-                    });
-                }
+                // Create a bindable list with client and employee names
+                var bindableOrders = orders.Select(o => new {
+                    ID = o.ID,
+                    Client = o.Client?.Name ?? "Unknown",
+                    Employee = o.Employee?.Name ?? "Unknown",
+                    OrderDate = o.OrderDate,
+                    TotalAmount = o.TotalPrice,
+                    Status = o.Status
+                }).ToList();
                 
-                // Display the orders
+                // Set the data source
                 dgvOrders.DataSource = bindableOrders;
                 
                 // Configure columns
-                if (dgvOrders.Columns.Count > 0)
-                {
-                    dgvOrders.Columns["ID"].Width = 50;
-                    dgvOrders.Columns["ID"].HeaderText = "Order ID";
-                    dgvOrders.Columns["ClientID"].Visible = false;
-                    dgvOrders.Columns["EmployeeID"].Visible = false;
-                    
-                    dgvOrders.Columns["ClientName"].Width = 150;
-                    dgvOrders.Columns["ClientName"].HeaderText = "Client";
-                    
-                    dgvOrders.Columns["EmployeeName"].Width = 150;
-                    dgvOrders.Columns["EmployeeName"].HeaderText = "Employee";
-                    
-                    dgvOrders.Columns["OrderDate"].Width = 120;
-                    dgvOrders.Columns["OrderDate"].DefaultCellStyle.Format = "MM/dd/yyyy HH:mm";
-                    dgvOrders.Columns["OrderDate"].HeaderText = "Order Date";
-                    
-                    dgvOrders.Columns["TotalPrice"].Width = 100;
-                    dgvOrders.Columns["TotalPrice"].DefaultCellStyle.Format = "N2";
-                    dgvOrders.Columns["TotalPrice"].HeaderText = "Total Amount";
-                }
+                dgvOrders.Columns["ID"].HeaderText = "Order ID";
+                dgvOrders.Columns["ID"].Width = 80;
+                dgvOrders.Columns["Client"].HeaderText = "Client";
+                dgvOrders.Columns["Client"].Width = 150;
+                dgvOrders.Columns["Employee"].HeaderText = "Employee";
+                dgvOrders.Columns["Employee"].Width = 150;
+                dgvOrders.Columns["OrderDate"].HeaderText = "Order Date";
+                dgvOrders.Columns["OrderDate"].Width = 120;
+                dgvOrders.Columns["OrderDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
+                dgvOrders.Columns["TotalAmount"].HeaderText = "Total Amount";
+                dgvOrders.Columns["TotalAmount"].Width = 120;
+                dgvOrders.Columns["TotalAmount"].DefaultCellStyle.Format = "C2";
+                dgvOrders.Columns["Status"].HeaderText = "Status";
+                dgvOrders.Columns["Status"].Width = 100;
+                
+                // Color code the Status column
+                dgvOrders.CellFormatting += DgvOrders_CellFormatting;
+                
+                // Clear order details
+                dgvOrderItems.DataSource = null;
+                currentOrder = null;
+                btnGenerateBill.Enabled = false;
+                grpOrderStatus.Enabled = false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error loading orders: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void DgvOrders_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvOrders.Columns[e.ColumnIndex].Name == "Status" && e.Value != null)
+            {
+                string status = e.Value.ToString();
+                switch (status)
+                {
+                    case "Active":
+                        e.CellStyle.ForeColor = Color.Blue;
+                        break;
+                    case "Completed":
+                        e.CellStyle.ForeColor = Color.Green;
+                        break;
+                    case "Cancelled":
+                        e.CellStyle.ForeColor = Color.Red;
+                        break;
+                }
             }
         }
 
@@ -363,13 +451,21 @@ namespace VDStore.Forms
         {
             if (e.RowIndex >= 0)
             {
+                // Get the order ID from the selected row
                 int orderID = Convert.ToInt32(dgvOrders.Rows[e.RowIndex].Cells["ID"].Value);
+                
+                // Load the current order
                 currentOrder = OrderDAL.GetOrderByID(orderID);
                 
+                // Load order items
                 if (currentOrder != null)
                 {
                     LoadOrderItems(currentOrder);
                     btnGenerateBill.Enabled = true;
+                    
+                    // Enable and set the status dropdown
+                    grpOrderStatus.Enabled = true;
+                    cboStatus.SelectedItem = currentOrder.Status;
                 }
             }
         }
@@ -444,20 +540,59 @@ namespace VDStore.Forms
                 return;
             }
             
+            // Kiểm tra nếu đơn hàng đã ở trạng thái "Cancelled"
+            if (currentOrder.Status == "Cancelled")
+            {
+                MessageBox.Show("Cannot generate bill for a cancelled order.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
             try
             {
-                // Check if bill already exists for this order
-                // This would require additional functionality in your BillDAL class
+                // Lưu ID đơn hàng trước khi gọi LoadOrders() làm mất currentOrder
+                int orderId = currentOrder.ID;
                 
                 // Generate bill
-                int billID = BillDAL.GenerateBill(currentOrder.ID);
+                int billID = BillDAL.GenerateBill(orderId);
                 
                 if (billID > 0)
                 {
-                    MessageBox.Show("Bill generated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    // Cập nhật trạng thái đơn hàng thành "Completed"
+                    if (currentOrder.Status != "Completed")
+                    {
+                        if (OrderDAL.UpdateOrderStatus(orderId, "Completed"))
+                        {
+                            MessageBox.Show("Bill generated successfully and order status updated to Completed!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Bill generated successfully but failed to update order status.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bill generated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
                     
                     // Refresh the orders
                     LoadOrders();
+                    
+                    // Tìm và chọn lại đơn hàng vừa cập nhật
+                    if (dgvOrders.Rows.Count > 0)
+                    {
+                        for (int i = 0; i < dgvOrders.Rows.Count; i++)
+                        {
+                            if (Convert.ToInt32(dgvOrders.Rows[i].Cells["ID"].Value) == orderId)
+                            {
+                                dgvOrders.Rows[i].Selected = true;
+                                dgvOrders.CurrentCell = dgvOrders.Rows[i].Cells[0];
+                                
+                                // Đặt lại currentOrder và cập nhật giao diện
+                                dgvOrders_CellClick(dgvOrders, new DataGridViewCellEventArgs(0, i));
+                                break;
+                            }
+                        }
+                    }
                 }
                 else
                 {
@@ -539,6 +674,72 @@ namespace VDStore.Forms
                 {
                     MessageBox.Show($"Error exporting data: {ex.Message}", "Error", 
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnUpdateStatus_Click(object sender, EventArgs e)
+        {
+            if (currentOrder == null)
+            {
+                MessageBox.Show("Please select an order first.", "No Order Selected", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+            string newStatus = cboStatus.SelectedItem.ToString();
+            
+            // Verify if status changed
+            if (newStatus == currentOrder.Status)
+            {
+                MessageBox.Show("Order status is already set to " + newStatus, "No Change", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            
+            // Confirm update
+            DialogResult result = MessageBox.Show(
+                $"Are you sure you want to change the order status from '{currentOrder.Status}' to '{newStatus}'?", 
+                "Confirm Status Update", 
+                MessageBoxButtons.YesNo, 
+                MessageBoxIcon.Question);
+                
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    int orderId = currentOrder.ID; // Lưu ID trước khi LoadOrders() làm mất currentOrder
+                    
+                    if (OrderDAL.UpdateOrderStatus(orderId, newStatus))
+                    {
+                        MessageBox.Show("Order status updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
+                        // Reload orders to refresh the grid
+                        LoadOrders();
+                        
+                        // Find and select the updated order
+                        if (dgvOrders.Rows.Count > 0)
+                        {
+                            for (int i = 0; i < dgvOrders.Rows.Count; i++)
+                            {
+                                if (Convert.ToInt32(dgvOrders.Rows[i].Cells["ID"].Value) == orderId)
+                                {
+                                    dgvOrders.Rows[i].Selected = true;
+                                    dgvOrders.CurrentCell = dgvOrders.Rows[i].Cells[0];
+                                    
+                                    // Đặt lại currentOrder và cập nhật giao diện
+                                    dgvOrders_CellClick(dgvOrders, new DataGridViewCellEventArgs(0, i));
+                                    break;
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Failed to update order status.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error updating order status: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }

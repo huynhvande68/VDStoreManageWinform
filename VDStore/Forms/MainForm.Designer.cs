@@ -58,77 +58,77 @@ namespace VDStore.Forms
             this.mnuLogout});
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
-            this.mnuMain.Size = new System.Drawing.Size(1302, 33);
+            this.mnuMain.Size = new System.Drawing.Size(1302, 38);
             this.mnuMain.TabIndex = 0;
             this.mnuMain.Text = "menuStrip1";
             // 
             // mnuHome
             // 
-            this.mnuHome.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuHome.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuHome.Image = ((System.Drawing.Image)(resources.GetObject("mnuHome.Image")));
             this.mnuHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mnuHome.Name = "mnuHome";
-            this.mnuHome.Size = new System.Drawing.Size(94, 29);
+            this.mnuHome.Size = new System.Drawing.Size(100, 34);
             this.mnuHome.Text = "Home";
             this.mnuHome.Click += new System.EventHandler(this.MnuHome_Click);
             // 
             // mnuDashboard
             // 
-            this.mnuDashboard.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuDashboard.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuDashboard.Image = ((System.Drawing.Image)(resources.GetObject("mnuDashboard.Image")));
             this.mnuDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mnuDashboard.Name = "mnuDashboard";
-            this.mnuDashboard.Size = new System.Drawing.Size(204, 29);
+            this.mnuDashboard.Size = new System.Drawing.Size(147, 34);
             this.mnuDashboard.Text = "Dashboard";
             this.mnuDashboard.Click += new System.EventHandler(this.MnuDashboard_Click);
             // 
             // mnuEmployee
             // 
-            this.mnuEmployee.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.mnuEmployee.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuEmployee.Image = ((System.Drawing.Image)(resources.GetObject("mnuEmployee.Image")));
             this.mnuEmployee.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mnuEmployee.Name = "mnuEmployee";
-            this.mnuEmployee.Size = new System.Drawing.Size(204, 29);
+            this.mnuEmployee.Size = new System.Drawing.Size(230, 34);
             this.mnuEmployee.Text = "Manage Employees";
             this.mnuEmployee.Click += new System.EventHandler(this.MnuEmployee_Click);
             // 
             // mnuClient
             // 
-            this.mnuClient.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.mnuClient.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuClient.Image = ((System.Drawing.Image)(resources.GetObject("mnuClient.Image")));
             this.mnuClient.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mnuClient.Name = "mnuClient";
-            this.mnuClient.Size = new System.Drawing.Size(204, 29);
+            this.mnuClient.Size = new System.Drawing.Size(192, 34);
             this.mnuClient.Text = "Manage Clients";
             this.mnuClient.Click += new System.EventHandler(this.MnuClient_Click);
             // 
             // mnuProduct
             // 
-            this.mnuProduct.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.mnuProduct.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuProduct.Image = ((System.Drawing.Image)(resources.GetObject("mnuProduct.Image")));
             this.mnuProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mnuProduct.Name = "mnuProduct";
-            this.mnuProduct.Size = new System.Drawing.Size(204, 29);
+            this.mnuProduct.Size = new System.Drawing.Size(213, 34);
             this.mnuProduct.Text = "Manage Products";
             this.mnuProduct.Click += new System.EventHandler(this.MnuProduct_Click);
             // 
             // mnuManageOrders
             // 
-            this.mnuManageOrders.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.mnuManageOrders.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuManageOrders.Image = ((System.Drawing.Image)(resources.GetObject("mnuManageOrders.Image")));
             this.mnuManageOrders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mnuManageOrders.Name = "mnuManageOrders";
-            this.mnuManageOrders.Size = new System.Drawing.Size(204, 29);
+            this.mnuManageOrders.Size = new System.Drawing.Size(191, 34);
             this.mnuManageOrders.Text = "Manage Orders";
             this.mnuManageOrders.Click += new System.EventHandler(this.MnuManageOrders_Click);
             // 
             // mnuViewBills
             // 
-            this.mnuViewBills.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.mnuViewBills.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuViewBills.Image = ((System.Drawing.Image)(resources.GetObject("mnuViewBills.Image")));
             this.mnuViewBills.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.mnuViewBills.Name = "mnuViewBills";
-            this.mnuViewBills.Size = new System.Drawing.Size(204, 29);
+            this.mnuViewBills.Size = new System.Drawing.Size(135, 34);
             this.mnuViewBills.Text = "View Bills";
             this.mnuViewBills.Click += new System.EventHandler(this.MnuViewBills_Click);
             // 
@@ -136,9 +136,10 @@ namespace VDStore.Forms
             // 
             this.mnuLogout.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
             this.mnuLogout.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.mnuLogout.ForeColor = System.Drawing.Color.Red;
             this.mnuLogout.Image = ((System.Drawing.Image)(resources.GetObject("mnuLogout.Image")));
             this.mnuLogout.Name = "mnuLogout";
-            this.mnuLogout.Size = new System.Drawing.Size(204, 29);
+            this.mnuLogout.Size = new System.Drawing.Size(105, 34);
             this.mnuLogout.Text = "Logout";
             this.mnuLogout.Click += new System.EventHandler(this.MnuLogout_Click);
             // 
@@ -147,7 +148,7 @@ namespace VDStore.Forms
             this.statusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.lblStatusUser,
             this.lblStatusDateTime});
-            this.statusStrip.Location = new System.Drawing.Point(0, 532);
+            this.statusStrip.Location = new System.Drawing.Point(0, 521);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1302, 22);
             this.statusStrip.TabIndex = 1;
@@ -176,14 +177,15 @@ namespace VDStore.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1302, 554);
+            this.ClientSize = new System.Drawing.Size(1302, 543);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.mnuMain);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuMain;
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pi Store Management System";
+            this.Text = "VD Store Management System";
+            this.TransparencyKey = System.Drawing.Color.Transparent;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);

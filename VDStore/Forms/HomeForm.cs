@@ -45,7 +45,6 @@ namespace VDStore.Forms
             this.lblTotal = new System.Windows.Forms.Label();
             this.btnClearCart = new System.Windows.Forms.Button();
             this.btnPlaceOrder = new System.Windows.Forms.Button();
-            this.btnExportCartCsv = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlCart.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCart)).BeginInit();
@@ -71,16 +70,17 @@ namespace VDStore.Forms
             this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.Location = new System.Drawing.Point(12, 9);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(150, 20);
+            this.lblWelcome.Size = new System.Drawing.Size(193, 20);
             this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome to Shop";
+            this.lblWelcome.Text = "Welcome to VDSTORE";
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSearch.Location = new System.Drawing.Point(13, 49);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(44, 13);
+            this.lblSearch.Size = new System.Drawing.Size(49, 15);
             this.lblSearch.TabIndex = 1;
             this.lblSearch.Text = "Search:";
             // 
@@ -93,6 +93,7 @@ namespace VDStore.Forms
             // 
             // btnSearch
             // 
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.Location = new System.Drawing.Point(290, 44);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
@@ -104,19 +105,21 @@ namespace VDStore.Forms
             // cboClient
             // 
             this.cboClient.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboClient.FormattingEnabled = true;
             this.cboClient.Location = new System.Drawing.Point(443, 46);
             this.cboClient.Name = "cboClient";
-            this.cboClient.Size = new System.Drawing.Size(221, 21);
+            this.cboClient.Size = new System.Drawing.Size(221, 23);
             this.cboClient.TabIndex = 5;
             this.cboClient.SelectedIndexChanged += new System.EventHandler(this.CboClient_SelectedIndexChanged);
             // 
             // lblClient
             // 
             this.lblClient.AutoSize = true;
+            this.lblClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClient.Location = new System.Drawing.Point(401, 49);
             this.lblClient.Name = "lblClient";
-            this.lblClient.Size = new System.Drawing.Size(36, 13);
+            this.lblClient.Size = new System.Drawing.Size(41, 15);
             this.lblClient.TabIndex = 4;
             this.lblClient.Text = "Client:";
             // 
@@ -130,12 +133,12 @@ namespace VDStore.Forms
             // 
             // pnlCart
             // 
+            this.pnlCart.BackColor = System.Drawing.SystemColors.Control;
             this.pnlCart.Controls.Add(this.dgvCart);
             this.pnlCart.Controls.Add(this.lblCart);
             this.pnlCart.Controls.Add(this.lblTotal);
             this.pnlCart.Controls.Add(this.btnClearCart);
             this.pnlCart.Controls.Add(this.btnPlaceOrder);
-            this.pnlCart.Controls.Add(this.btnExportCartCsv);
             this.pnlCart.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlCart.Location = new System.Drawing.Point(443, 80);
             this.pnlCart.Name = "pnlCart";
@@ -179,35 +182,30 @@ namespace VDStore.Forms
             // btnClearCart
             // 
             this.btnClearCart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClearCart.Location = new System.Drawing.Point(317, 409);
+            this.btnClearCart.BackColor = System.Drawing.Color.Tomato;
+            this.btnClearCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearCart.ForeColor = System.Drawing.Color.Black;
+            this.btnClearCart.Location = new System.Drawing.Point(288, 409);
             this.btnClearCart.Name = "btnClearCart";
-            this.btnClearCart.Size = new System.Drawing.Size(75, 23);
+            this.btnClearCart.Size = new System.Drawing.Size(83, 31);
             this.btnClearCart.TabIndex = 3;
             this.btnClearCart.Text = "Clear Cart";
-            this.btnClearCart.UseVisualStyleBackColor = true;
+            this.btnClearCart.UseVisualStyleBackColor = false;
             this.btnClearCart.Click += new System.EventHandler(this.BtnClearCart_Click);
             // 
             // btnPlaceOrder
             // 
             this.btnPlaceOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnPlaceOrder.Location = new System.Drawing.Point(398, 409);
+            this.btnPlaceOrder.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnPlaceOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaceOrder.ForeColor = System.Drawing.Color.Black;
+            this.btnPlaceOrder.Location = new System.Drawing.Point(377, 409);
             this.btnPlaceOrder.Name = "btnPlaceOrder";
-            this.btnPlaceOrder.Size = new System.Drawing.Size(75, 23);
+            this.btnPlaceOrder.Size = new System.Drawing.Size(96, 31);
             this.btnPlaceOrder.TabIndex = 4;
             this.btnPlaceOrder.Text = "Place Order";
-            this.btnPlaceOrder.UseVisualStyleBackColor = true;
+            this.btnPlaceOrder.UseVisualStyleBackColor = false;
             this.btnPlaceOrder.Click += new System.EventHandler(this.BtnPlaceOrder_Click);
-            // 
-            // btnExportCartCsv
-            // 
-            this.btnExportCartCsv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExportCartCsv.Location = new System.Drawing.Point(236, 409);
-            this.btnExportCartCsv.Name = "btnExportCartCsv";
-            this.btnExportCartCsv.Size = new System.Drawing.Size(75, 23);
-            this.btnExportCartCsv.TabIndex = 5;
-            this.btnExportCartCsv.Text = "Export CSV";
-            this.btnExportCartCsv.UseVisualStyleBackColor = true;
-            this.btnExportCartCsv.Click += new System.EventHandler(this.BtnExportCartCsv_Click);
             // 
             // HomeForm
             // 
@@ -244,7 +242,6 @@ namespace VDStore.Forms
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnClearCart;
         private System.Windows.Forms.Button btnPlaceOrder;
-        private System.Windows.Forms.Button btnExportCartCsv;
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
@@ -405,7 +402,8 @@ namespace VDStore.Forms
                     Location = new Point(34, 245),  // Moved down
                     Width = 100,
                     Height = 30,
-                    Tag = product
+                    Tag = product,
+                    BackColor = Color.LightGreen,
                 };
                 
                 btnAddToCart.Click += BtnAddToCart_Click;
@@ -517,7 +515,8 @@ namespace VDStore.Forms
                 HeaderText = "Remove",
                 Text = "X",
                 UseColumnTextForButtonValue = true,
-                Width = 60
+                Width = 60,
+                
             };
             
             // Add columns to grid
@@ -532,6 +531,7 @@ namespace VDStore.Forms
             // Handle cell click for remove button
             dgvCart.CellClick += DgvCart_CellClick;
             
+
             // Refresh cart
             RefreshCart();
         }
@@ -735,6 +735,11 @@ namespace VDStore.Forms
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void pnlCart_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 } 

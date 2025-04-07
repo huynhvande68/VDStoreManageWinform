@@ -30,15 +30,14 @@ namespace VDStore.Forms
 
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend7 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend8 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlSalesRevenue = new System.Windows.Forms.Panel();
             this.chartSalesRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -56,7 +55,6 @@ namespace VDStore.Forms
             this.lblDateRange = new System.Windows.Forms.Label();
             this.pnlDateRange = new System.Windows.Forms.Panel();
             this.btnRefresh = new System.Windows.Forms.Button();
-            
             this.pnlSalesRevenue.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartSalesRevenue)).BeginInit();
             this.pnlInventory.SuspendLayout();
@@ -67,9 +65,9 @@ namespace VDStore.Forms
             ((System.ComponentModel.ISupportInitialize)(this.chartCustomerOrders)).BeginInit();
             this.pnlDateRange.SuspendLayout();
             this.SuspendLayout();
-            
+            // 
             // lblTitle
-            this.lblTitle = new System.Windows.Forms.Label();
+            // 
             this.lblTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.Location = new System.Drawing.Point(0, 0);
@@ -78,26 +76,141 @@ namespace VDStore.Forms
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Dashboard";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
-            // pnlDateRange
-            this.pnlDateRange.Controls.Add(this.btnRefresh);
-            this.pnlDateRange.Controls.Add(this.cboDateRange);
-            this.pnlDateRange.Controls.Add(this.lblDateRange);
-            this.pnlDateRange.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlDateRange.Location = new System.Drawing.Point(0, 40);
-            this.pnlDateRange.Name = "pnlDateRange";
-            this.pnlDateRange.Size = new System.Drawing.Size(1200, 40);
-            this.pnlDateRange.TabIndex = 1;
-            
-            // lblDateRange
-            this.lblDateRange.AutoSize = true;
-            this.lblDateRange.Location = new System.Drawing.Point(12, 12);
-            this.lblDateRange.Name = "lblDateRange";
-            this.lblDateRange.Size = new System.Drawing.Size(73, 13);
-            this.lblDateRange.TabIndex = 0;
-            this.lblDateRange.Text = "Date Range:";
-            
+            // 
+            // pnlSalesRevenue
+            // 
+            this.pnlSalesRevenue.Controls.Add(this.chartSalesRevenue);
+            this.pnlSalesRevenue.Controls.Add(this.lblSalesRevenue);
+            this.pnlSalesRevenue.Location = new System.Drawing.Point(12, 86);
+            this.pnlSalesRevenue.Name = "pnlSalesRevenue";
+            this.pnlSalesRevenue.Size = new System.Drawing.Size(580, 300);
+            this.pnlSalesRevenue.TabIndex = 2;
+            // 
+            // chartSalesRevenue
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.chartSalesRevenue.ChartAreas.Add(chartArea5);
+            this.chartSalesRevenue.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend5.Name = "Legend1";
+            this.chartSalesRevenue.Legends.Add(legend5);
+            this.chartSalesRevenue.Location = new System.Drawing.Point(0, 23);
+            this.chartSalesRevenue.Name = "chartSalesRevenue";
+            this.chartSalesRevenue.Size = new System.Drawing.Size(580, 277);
+            this.chartSalesRevenue.TabIndex = 1;
+            this.chartSalesRevenue.Text = "Sales Revenue";
+            // 
+            // lblSalesRevenue
+            // 
+            this.lblSalesRevenue.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblSalesRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSalesRevenue.Location = new System.Drawing.Point(0, 0);
+            this.lblSalesRevenue.Name = "lblSalesRevenue";
+            this.lblSalesRevenue.Size = new System.Drawing.Size(580, 23);
+            this.lblSalesRevenue.TabIndex = 0;
+            this.lblSalesRevenue.Text = "Sales Revenue";
+            this.lblSalesRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlInventory
+            // 
+            this.pnlInventory.Controls.Add(this.chartInventory);
+            this.pnlInventory.Controls.Add(this.lblInventory);
+            this.pnlInventory.Location = new System.Drawing.Point(608, 86);
+            this.pnlInventory.Name = "pnlInventory";
+            this.pnlInventory.Size = new System.Drawing.Size(580, 300);
+            this.pnlInventory.TabIndex = 3;
+            // 
+            // chartInventory
+            // 
+            chartArea6.Name = "ChartArea1";
+            this.chartInventory.ChartAreas.Add(chartArea6);
+            this.chartInventory.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend6.Name = "Legend1";
+            this.chartInventory.Legends.Add(legend6);
+            this.chartInventory.Location = new System.Drawing.Point(0, 23);
+            this.chartInventory.Name = "chartInventory";
+            this.chartInventory.Size = new System.Drawing.Size(580, 277);
+            this.chartInventory.TabIndex = 1;
+            this.chartInventory.Text = "Product Inventory";
+            // 
+            // lblInventory
+            // 
+            this.lblInventory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInventory.Location = new System.Drawing.Point(0, 0);
+            this.lblInventory.Name = "lblInventory";
+            this.lblInventory.Size = new System.Drawing.Size(580, 23);
+            this.lblInventory.TabIndex = 0;
+            this.lblInventory.Text = "Product Inventory";
+            this.lblInventory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlEmployeeSales
+            // 
+            this.pnlEmployeeSales.Controls.Add(this.chartEmployeeSales);
+            this.pnlEmployeeSales.Controls.Add(this.lblEmployeeSales);
+            this.pnlEmployeeSales.Location = new System.Drawing.Point(12, 392);
+            this.pnlEmployeeSales.Name = "pnlEmployeeSales";
+            this.pnlEmployeeSales.Size = new System.Drawing.Size(580, 300);
+            this.pnlEmployeeSales.TabIndex = 4;
+            // 
+            // chartEmployeeSales
+            // 
+            chartArea7.Name = "ChartArea1";
+            this.chartEmployeeSales.ChartAreas.Add(chartArea7);
+            this.chartEmployeeSales.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend7.Name = "Legend1";
+            this.chartEmployeeSales.Legends.Add(legend7);
+            this.chartEmployeeSales.Location = new System.Drawing.Point(0, 23);
+            this.chartEmployeeSales.Name = "chartEmployeeSales";
+            this.chartEmployeeSales.Size = new System.Drawing.Size(580, 277);
+            this.chartEmployeeSales.TabIndex = 1;
+            this.chartEmployeeSales.Text = "Employee Sales Performance";
+            // 
+            // lblEmployeeSales
+            // 
+            this.lblEmployeeSales.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblEmployeeSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmployeeSales.Location = new System.Drawing.Point(0, 0);
+            this.lblEmployeeSales.Name = "lblEmployeeSales";
+            this.lblEmployeeSales.Size = new System.Drawing.Size(580, 23);
+            this.lblEmployeeSales.TabIndex = 0;
+            this.lblEmployeeSales.Text = "Employee Sales Performance";
+            this.lblEmployeeSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pnlCustomerOrders
+            // 
+            this.pnlCustomerOrders.Controls.Add(this.chartCustomerOrders);
+            this.pnlCustomerOrders.Controls.Add(this.lblCustomerOrders);
+            this.pnlCustomerOrders.Location = new System.Drawing.Point(608, 392);
+            this.pnlCustomerOrders.Name = "pnlCustomerOrders";
+            this.pnlCustomerOrders.Size = new System.Drawing.Size(580, 300);
+            this.pnlCustomerOrders.TabIndex = 5;
+            // 
+            // chartCustomerOrders
+            // 
+            chartArea8.Name = "ChartArea1";
+            this.chartCustomerOrders.ChartAreas.Add(chartArea8);
+            this.chartCustomerOrders.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend8.Name = "Legend1";
+            this.chartCustomerOrders.Legends.Add(legend8);
+            this.chartCustomerOrders.Location = new System.Drawing.Point(0, 23);
+            this.chartCustomerOrders.Name = "chartCustomerOrders";
+            this.chartCustomerOrders.Size = new System.Drawing.Size(580, 277);
+            this.chartCustomerOrders.TabIndex = 1;
+            this.chartCustomerOrders.Text = "Orders by Customer";
+            // 
+            // lblCustomerOrders
+            // 
+            this.lblCustomerOrders.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblCustomerOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCustomerOrders.Location = new System.Drawing.Point(0, 0);
+            this.lblCustomerOrders.Name = "lblCustomerOrders";
+            this.lblCustomerOrders.Size = new System.Drawing.Size(580, 23);
+            this.lblCustomerOrders.TabIndex = 0;
+            this.lblCustomerOrders.Text = "Orders by Customer";
+            this.lblCustomerOrders.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // cboDateRange
+            // 
             this.cboDateRange.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDateRange.FormattingEnabled = true;
             this.cboDateRange.Items.AddRange(new object[] {
@@ -110,8 +223,31 @@ namespace VDStore.Forms
             this.cboDateRange.Name = "cboDateRange";
             this.cboDateRange.Size = new System.Drawing.Size(121, 21);
             this.cboDateRange.TabIndex = 1;
-            
+            // 
+            // lblDateRange
+            // 
+            this.lblDateRange.AutoSize = true;
+            this.lblDateRange.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDateRange.Location = new System.Drawing.Point(12, 12);
+            this.lblDateRange.Name = "lblDateRange";
+            this.lblDateRange.Size = new System.Drawing.Size(76, 15);
+            this.lblDateRange.TabIndex = 0;
+            this.lblDateRange.Text = "Date Range:";
+            // 
+            // pnlDateRange
+            // 
+            this.pnlDateRange.Controls.Add(this.btnRefresh);
+            this.pnlDateRange.Controls.Add(this.cboDateRange);
+            this.pnlDateRange.Controls.Add(this.lblDateRange);
+            this.pnlDateRange.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDateRange.Location = new System.Drawing.Point(0, 40);
+            this.pnlDateRange.Name = "pnlDateRange";
+            this.pnlDateRange.Size = new System.Drawing.Size(1200, 40);
+            this.pnlDateRange.TabIndex = 1;
+            // 
             // btnRefresh
+            // 
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRefresh.Location = new System.Drawing.Point(218, 8);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(75, 23);
@@ -119,128 +255,9 @@ namespace VDStore.Forms
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            
-            // pnlSalesRevenue
-            this.pnlSalesRevenue.Controls.Add(this.chartSalesRevenue);
-            this.pnlSalesRevenue.Controls.Add(this.lblSalesRevenue);
-            this.pnlSalesRevenue.Location = new System.Drawing.Point(12, 86);
-            this.pnlSalesRevenue.Name = "pnlSalesRevenue";
-            this.pnlSalesRevenue.Size = new System.Drawing.Size(580, 300);
-            this.pnlSalesRevenue.TabIndex = 2;
-            
-            // lblSalesRevenue
-            this.lblSalesRevenue.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblSalesRevenue.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSalesRevenue.Location = new System.Drawing.Point(0, 0);
-            this.lblSalesRevenue.Name = "lblSalesRevenue";
-            this.lblSalesRevenue.Size = new System.Drawing.Size(580, 23);
-            this.lblSalesRevenue.TabIndex = 0;
-            this.lblSalesRevenue.Text = "Sales Revenue";
-            this.lblSalesRevenue.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
-            // chartSalesRevenue
-            chartArea1.Name = "ChartArea1";
-            this.chartSalesRevenue.ChartAreas.Add(chartArea1);
-            this.chartSalesRevenue.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chartSalesRevenue.Legends.Add(legend1);
-            this.chartSalesRevenue.Location = new System.Drawing.Point(0, 23);
-            this.chartSalesRevenue.Name = "chartSalesRevenue";
-            this.chartSalesRevenue.Size = new System.Drawing.Size(580, 277);
-            this.chartSalesRevenue.TabIndex = 1;
-            this.chartSalesRevenue.Text = "Sales Revenue";
-            
-            // pnlInventory
-            this.pnlInventory.Controls.Add(this.chartInventory);
-            this.pnlInventory.Controls.Add(this.lblInventory);
-            this.pnlInventory.Location = new System.Drawing.Point(608, 86);
-            this.pnlInventory.Name = "pnlInventory";
-            this.pnlInventory.Size = new System.Drawing.Size(580, 300);
-            this.pnlInventory.TabIndex = 3;
-            
-            // lblInventory
-            this.lblInventory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblInventory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblInventory.Location = new System.Drawing.Point(0, 0);
-            this.lblInventory.Name = "lblInventory";
-            this.lblInventory.Size = new System.Drawing.Size(580, 23);
-            this.lblInventory.TabIndex = 0;
-            this.lblInventory.Text = "Product Inventory";
-            this.lblInventory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
-            // chartInventory
-            chartArea2.Name = "ChartArea1";
-            this.chartInventory.ChartAreas.Add(chartArea2);
-            this.chartInventory.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chartInventory.Legends.Add(legend2);
-            this.chartInventory.Location = new System.Drawing.Point(0, 23);
-            this.chartInventory.Name = "chartInventory";
-            this.chartInventory.Size = new System.Drawing.Size(580, 277);
-            this.chartInventory.TabIndex = 1;
-            this.chartInventory.Text = "Product Inventory";
-            
-            // pnlEmployeeSales
-            this.pnlEmployeeSales.Controls.Add(this.chartEmployeeSales);
-            this.pnlEmployeeSales.Controls.Add(this.lblEmployeeSales);
-            this.pnlEmployeeSales.Location = new System.Drawing.Point(12, 392);
-            this.pnlEmployeeSales.Name = "pnlEmployeeSales";
-            this.pnlEmployeeSales.Size = new System.Drawing.Size(580, 300);
-            this.pnlEmployeeSales.TabIndex = 4;
-            
-            // lblEmployeeSales
-            this.lblEmployeeSales.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblEmployeeSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmployeeSales.Location = new System.Drawing.Point(0, 0);
-            this.lblEmployeeSales.Name = "lblEmployeeSales";
-            this.lblEmployeeSales.Size = new System.Drawing.Size(580, 23);
-            this.lblEmployeeSales.TabIndex = 0;
-            this.lblEmployeeSales.Text = "Employee Sales Performance";
-            this.lblEmployeeSales.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
-            // chartEmployeeSales
-            chartArea3.Name = "ChartArea1";
-            this.chartEmployeeSales.ChartAreas.Add(chartArea3);
-            this.chartEmployeeSales.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chartEmployeeSales.Legends.Add(legend3);
-            this.chartEmployeeSales.Location = new System.Drawing.Point(0, 23);
-            this.chartEmployeeSales.Name = "chartEmployeeSales";
-            this.chartEmployeeSales.Size = new System.Drawing.Size(580, 277);
-            this.chartEmployeeSales.TabIndex = 1;
-            this.chartEmployeeSales.Text = "Employee Sales Performance";
-            
-            // pnlCustomerOrders
-            this.pnlCustomerOrders.Controls.Add(this.chartCustomerOrders);
-            this.pnlCustomerOrders.Controls.Add(this.lblCustomerOrders);
-            this.pnlCustomerOrders.Location = new System.Drawing.Point(608, 392);
-            this.pnlCustomerOrders.Name = "pnlCustomerOrders";
-            this.pnlCustomerOrders.Size = new System.Drawing.Size(580, 300);
-            this.pnlCustomerOrders.TabIndex = 5;
-            
-            // lblCustomerOrders
-            this.lblCustomerOrders.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblCustomerOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCustomerOrders.Location = new System.Drawing.Point(0, 0);
-            this.lblCustomerOrders.Name = "lblCustomerOrders";
-            this.lblCustomerOrders.Size = new System.Drawing.Size(580, 23);
-            this.lblCustomerOrders.TabIndex = 0;
-            this.lblCustomerOrders.Text = "Orders by Customer";
-            this.lblCustomerOrders.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            
-            // chartCustomerOrders
-            chartArea4.Name = "ChartArea1";
-            this.chartCustomerOrders.ChartAreas.Add(chartArea4);
-            this.chartCustomerOrders.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.chartCustomerOrders.Legends.Add(legend4);
-            this.chartCustomerOrders.Location = new System.Drawing.Point(0, 23);
-            this.chartCustomerOrders.Name = "chartCustomerOrders";
-            this.chartCustomerOrders.Size = new System.Drawing.Size(580, 277);
-            this.chartCustomerOrders.TabIndex = 1;
-            this.chartCustomerOrders.Text = "Orders by Customer";
-            
+            // 
             // DashboardForm
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 700);
@@ -253,7 +270,6 @@ namespace VDStore.Forms
             this.Name = "DashboardForm";
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.DashboardForm_Load);
-            
             this.pnlSalesRevenue.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartSalesRevenue)).EndInit();
             this.pnlInventory.ResumeLayout(false);
@@ -265,6 +281,7 @@ namespace VDStore.Forms
             this.pnlDateRange.ResumeLayout(false);
             this.pnlDateRange.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         private System.Windows.Forms.Label lblTitle;

@@ -26,6 +26,7 @@ namespace VDStore.DAL
                     EmployeeID = Convert.ToInt32(row["EmployeeID"]),
                     OrderDate = Convert.ToDateTime(row["OrderDate"]),
                     TotalPrice = Convert.ToDecimal(row["TotalPrice"]),
+                    Status = row["Status"] != DBNull.Value ? row["Status"].ToString() : "Active",
                     Client = new Client { ID = Convert.ToInt32(row["ClientID"]), Name = row["ClientName"].ToString() },
                     Employee = new Employee { ID = Convert.ToInt32(row["EmployeeID"]), Name = row["EmployeeName"].ToString() }
                 };
@@ -58,6 +59,7 @@ namespace VDStore.DAL
                 EmployeeID = Convert.ToInt32(row["EmployeeID"]),
                 OrderDate = Convert.ToDateTime(row["OrderDate"]),
                 TotalPrice = Convert.ToDecimal(row["TotalPrice"]),
+                Status = row["Status"] != DBNull.Value ? row["Status"].ToString() : "Active",
                 Client = new Client { ID = Convert.ToInt32(row["ClientID"]), Name = row["ClientName"].ToString() },
                 Employee = new Employee { ID = Convert.ToInt32(row["EmployeeID"]), Name = row["EmployeeName"].ToString() },
                 OrderItems = GetOrderItemsByOrderID(Convert.ToInt32(row["ID"]))
@@ -77,15 +79,16 @@ namespace VDStore.DAL
                 new SqlParameter("@ClientID", order.ClientID),
                 new SqlParameter("@EmployeeID", order.EmployeeID),
                 new SqlParameter("@OrderDate", order.OrderDate),
+                new SqlParameter("@Status", order.Status ?? "Active"),
                 outputParam
             };
             
-            DbConnection.ExecuteNonQuery("EXEC sp_PlaceOrder @ClientID, @EmployeeID, @OrderDate, @OrderID OUTPUT", parameters);
+            DbConnection.ExecuteNonQuery("EXEC sp_PlaceOrder @ClientID, @EmployeeID, @OrderDate, @Status, @OrderID OUTPUT", parameters);
             
             return Convert.ToInt32(outputParam.Value);
         }
         
-        public static int PlaceOrder(int clientId, int employeeId, DateTime orderDate)
+        public static int PlaceOrder(int clientId, int employeeId, DateTime orderDate, string status = "Active")
         {
             SqlParameter outputParam = new SqlParameter("@OrderID", SqlDbType.Int)
             {
@@ -96,10 +99,11 @@ namespace VDStore.DAL
                 new SqlParameter("@ClientID", clientId),
                 new SqlParameter("@EmployeeID", employeeId),
                 new SqlParameter("@OrderDate", orderDate),
+                new SqlParameter("@Status", status),
                 outputParam
             };
             
-            DbConnection.ExecuteNonQuery("EXEC sp_PlaceOrder @ClientID, @EmployeeID, @OrderDate, @OrderID OUTPUT", parameters);
+            DbConnection.ExecuteNonQuery("EXEC sp_PlaceOrder @ClientID, @EmployeeID, @OrderDate, @Status, @OrderID OUTPUT", parameters);
             
             return Convert.ToInt32(outputParam.Value);
         }
@@ -200,6 +204,7 @@ namespace VDStore.DAL
                     EmployeeID = Convert.ToInt32(row["EmployeeID"]),
                     OrderDate = Convert.ToDateTime(row["OrderDate"]),
                     TotalPrice = Convert.ToDecimal(row["TotalPrice"]),
+                    Status = row["Status"] != DBNull.Value ? row["Status"].ToString() : "Active",
                     Client = new Client { ID = Convert.ToInt32(row["ClientID"]), Name = row["ClientName"].ToString() },
                     Employee = new Employee { ID = Convert.ToInt32(row["EmployeeID"]), Name = row["EmployeeName"].ToString() }
                 };
@@ -231,6 +236,58 @@ namespace VDStore.DAL
                     EmployeeID = Convert.ToInt32(row["EmployeeID"]),
                     OrderDate = Convert.ToDateTime(row["OrderDate"]),
                     TotalPrice = Convert.ToDecimal(row["TotalPrice"]),
+                    Status = row["Status"] != DBNull.Value ? row["Status"].ToString() : "Active",
+                    Client = new Client { ID = Convert.ToInt32(row["ClientID"]), Name = row["ClientName"].ToString() },
+                    Employee = new Employee { ID = Convert.ToInt32(row["EmployeeID"]), Name = row["EmployeeName"].ToString() }
+                };
+                
+                orders.Add(order);
+            }
+            
+            return orders;
+        }
+        
+        public static bool UpdateOrderStatus(int orderId, string status)
+        {
+            string query = "UPDATE [Order] SET Status = @Status WHERE ID = @OrderID";
+            SqlParameter[] parameters = {
+                new SqlParameter("@OrderID", orderId),
+                new SqlParameter("@Status", status)
+            };
+            
+            try
+            {
+                DbConnection.ExecuteNonQuery(query, parameters);
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        
+        public static List<Order> GetOrdersByStatus(string status)
+        {
+            string query = @"SELECT o.*, c.Name as ClientName, e.Name as EmployeeName 
+                           FROM [Order] o
+                           INNER JOIN Client c ON o.ClientID = c.ID
+                           INNER JOIN Employee e ON o.EmployeeID = e.ID
+                           WHERE o.Status = @Status";
+            SqlParameter[] parameters = { new SqlParameter("@Status", status) };
+            
+            DataTable dt = DbConnection.ExecuteQuery(query, parameters);
+            
+            List<Order> orders = new List<Order>();
+            foreach (DataRow row in dt.Rows)
+            {
+                Order order = new Order
+                {
+                    ID = Convert.ToInt32(row["ID"]),
+                    ClientID = Convert.ToInt32(row["ClientID"]),
+                    EmployeeID = Convert.ToInt32(row["EmployeeID"]),
+                    OrderDate = Convert.ToDateTime(row["OrderDate"]),
+                    TotalPrice = Convert.ToDecimal(row["TotalPrice"]),
+                    Status = row["Status"].ToString(),
                     Client = new Client { ID = Convert.ToInt32(row["ClientID"]), Name = row["ClientName"].ToString() },
                     Employee = new Employee { ID = Convert.ToInt32(row["EmployeeID"]), Name = row["EmployeeName"].ToString() }
                 };

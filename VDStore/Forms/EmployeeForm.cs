@@ -5,6 +5,7 @@ using VDStore.DAL;
 using VDStore.Models;
 using System.IO;
 using System.Text;
+using System.Drawing;
 
 namespace VDStore.Forms
 {
@@ -76,6 +77,7 @@ namespace VDStore.Forms
             this.grpEmployeeInfo.Controls.Add(this.lblName);
             this.grpEmployeeInfo.Controls.Add(this.txtID);
             this.grpEmployeeInfo.Controls.Add(this.lblID);
+            this.grpEmployeeInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpEmployeeInfo.Location = new System.Drawing.Point(12, 12);
             this.grpEmployeeInfo.Name = "grpEmployeeInfo";
             this.grpEmployeeInfo.Size = new System.Drawing.Size(376, 290);
@@ -88,7 +90,7 @@ namespace VDStore.Forms
             this.txtHireDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.txtHireDate.Location = new System.Drawing.Point(119, 238);
             this.txtHireDate.Name = "txtHireDate";
-            this.txtHireDate.Size = new System.Drawing.Size(200, 20);
+            this.txtHireDate.Size = new System.Drawing.Size(200, 21);
             this.txtHireDate.TabIndex = 13;
             // 
             // lblHireDate
@@ -96,7 +98,7 @@ namespace VDStore.Forms
             this.lblHireDate.AutoSize = true;
             this.lblHireDate.Location = new System.Drawing.Point(18, 241);
             this.lblHireDate.Name = "lblHireDate";
-            this.lblHireDate.Size = new System.Drawing.Size(55, 13);
+            this.lblHireDate.Size = new System.Drawing.Size(62, 15);
             this.lblHireDate.TabIndex = 12;
             this.lblHireDate.Text = "Hire Date:";
             // 
@@ -104,7 +106,7 @@ namespace VDStore.Forms
             // 
             this.txtSalary.Location = new System.Drawing.Point(119, 204);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(200, 20);
+            this.txtSalary.Size = new System.Drawing.Size(200, 21);
             this.txtSalary.TabIndex = 11;
             // 
             // lblSalary
@@ -112,7 +114,7 @@ namespace VDStore.Forms
             this.lblSalary.AutoSize = true;
             this.lblSalary.Location = new System.Drawing.Point(18, 207);
             this.lblSalary.Name = "lblSalary";
-            this.lblSalary.Size = new System.Drawing.Size(39, 13);
+            this.lblSalary.Size = new System.Drawing.Size(44, 15);
             this.lblSalary.TabIndex = 10;
             this.lblSalary.Text = "Salary:";
             // 
@@ -120,7 +122,7 @@ namespace VDStore.Forms
             // 
             this.txtAddress.Location = new System.Drawing.Point(119, 170);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(200, 20);
+            this.txtAddress.Size = new System.Drawing.Size(200, 21);
             this.txtAddress.TabIndex = 9;
             // 
             // lblAddress
@@ -128,7 +130,7 @@ namespace VDStore.Forms
             this.lblAddress.AutoSize = true;
             this.lblAddress.Location = new System.Drawing.Point(18, 173);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(48, 13);
+            this.lblAddress.Size = new System.Drawing.Size(54, 15);
             this.lblAddress.TabIndex = 8;
             this.lblAddress.Text = "Address:";
             // 
@@ -136,7 +138,7 @@ namespace VDStore.Forms
             // 
             this.txtPhone.Location = new System.Drawing.Point(119, 135);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(200, 20);
+            this.txtPhone.Size = new System.Drawing.Size(200, 21);
             this.txtPhone.TabIndex = 7;
             // 
             // lblPhone
@@ -144,7 +146,7 @@ namespace VDStore.Forms
             this.lblPhone.AutoSize = true;
             this.lblPhone.Location = new System.Drawing.Point(18, 138);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(41, 13);
+            this.lblPhone.Size = new System.Drawing.Size(46, 15);
             this.lblPhone.TabIndex = 6;
             this.lblPhone.Text = "Phone:";
             // 
@@ -152,7 +154,7 @@ namespace VDStore.Forms
             // 
             this.txtEmail.Location = new System.Drawing.Point(119, 101);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(200, 20);
+            this.txtEmail.Size = new System.Drawing.Size(200, 21);
             this.txtEmail.TabIndex = 5;
             // 
             // lblEmail
@@ -160,7 +162,7 @@ namespace VDStore.Forms
             this.lblEmail.AutoSize = true;
             this.lblEmail.Location = new System.Drawing.Point(18, 104);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
+            this.lblEmail.Size = new System.Drawing.Size(42, 15);
             this.lblEmail.TabIndex = 4;
             this.lblEmail.Text = "Email:";
             // 
@@ -168,7 +170,7 @@ namespace VDStore.Forms
             // 
             this.txtName.Location = new System.Drawing.Point(119, 65);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(200, 20);
+            this.txtName.Size = new System.Drawing.Size(200, 21);
             this.txtName.TabIndex = 3;
             // 
             // lblName
@@ -176,7 +178,7 @@ namespace VDStore.Forms
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(18, 68);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.Size = new System.Drawing.Size(44, 15);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Name:";
             // 
@@ -185,7 +187,7 @@ namespace VDStore.Forms
             this.txtID.Location = new System.Drawing.Point(119, 31);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.Size = new System.Drawing.Size(100, 21);
             this.txtID.TabIndex = 1;
             // 
             // lblID
@@ -193,7 +195,7 @@ namespace VDStore.Forms
             this.lblID.AutoSize = true;
             this.lblID.Location = new System.Drawing.Point(18, 34);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(21, 13);
+            this.lblID.Size = new System.Drawing.Size(22, 15);
             this.lblID.TabIndex = 0;
             this.lblID.Text = "ID:";
             // 
@@ -203,6 +205,7 @@ namespace VDStore.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpEmployeeList.Controls.Add(this.dgvEmployees);
+            this.grpEmployeeList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpEmployeeList.Location = new System.Drawing.Point(394, 80);
             this.grpEmployeeList.Name = "grpEmployeeList";
             this.grpEmployeeList.Size = new System.Drawing.Size(768, 358);
@@ -216,12 +219,12 @@ namespace VDStore.Forms
             this.dgvEmployees.AllowUserToDeleteRows = false;
             this.dgvEmployees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmployees.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvEmployees.Location = new System.Drawing.Point(3, 16);
+            this.dgvEmployees.Location = new System.Drawing.Point(3, 17);
             this.dgvEmployees.MultiSelect = false;
             this.dgvEmployees.Name = "dgvEmployees";
             this.dgvEmployees.ReadOnly = true;
             this.dgvEmployees.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvEmployees.Size = new System.Drawing.Size(762, 339);
+            this.dgvEmployees.Size = new System.Drawing.Size(762, 338);
             this.dgvEmployees.TabIndex = 0;
             this.dgvEmployees.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmployees_CellClick);
             // 
@@ -230,6 +233,7 @@ namespace VDStore.Forms
             this.grpSearch.Controls.Add(this.btnSearch);
             this.grpSearch.Controls.Add(this.txtSearch);
             this.grpSearch.Controls.Add(this.lblSearch);
+            this.grpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpSearch.Location = new System.Drawing.Point(394, 12);
             this.grpSearch.Name = "grpSearch";
             this.grpSearch.Size = new System.Drawing.Size(394, 62);
@@ -251,7 +255,7 @@ namespace VDStore.Forms
             // 
             this.txtSearch.Location = new System.Drawing.Point(84, 29);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(223, 20);
+            this.txtSearch.Size = new System.Drawing.Size(223, 21);
             this.txtSearch.TabIndex = 1;
             // 
             // lblSearch
@@ -259,48 +263,59 @@ namespace VDStore.Forms
             this.lblSearch.AutoSize = true;
             this.lblSearch.Location = new System.Drawing.Point(6, 32);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(71, 13);
+            this.lblSearch.Size = new System.Drawing.Size(81, 15);
             this.lblSearch.TabIndex = 0;
             this.lblSearch.Text = "Search Term:";
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(15, 323);
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnNew.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnNew.Location = new System.Drawing.Point(10, 315);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.Size = new System.Drawing.Size(75, 29);
             this.btnNew.TabIndex = 3;
             this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(104, 323);
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnSave.Location = new System.Drawing.Point(96, 315);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(75, 29);
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(196, 323);
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnDelete.Location = new System.Drawing.Point(187, 315);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(75, 29);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(286, 323);
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(278, 315);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.Size = new System.Drawing.Size(75, 29);
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // grpUserAccount
@@ -310,6 +325,7 @@ namespace VDStore.Forms
             this.grpUserAccount.Controls.Add(this.lblPassword);
             this.grpUserAccount.Controls.Add(this.txtUsername);
             this.grpUserAccount.Controls.Add(this.lblUsername);
+            this.grpUserAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpUserAccount.Location = new System.Drawing.Point(12, 355);
             this.grpUserAccount.Name = "grpUserAccount";
             this.grpUserAccount.Size = new System.Drawing.Size(376, 120);
@@ -319,12 +335,14 @@ namespace VDStore.Forms
             // 
             // btnCreateAccount
             // 
+            this.btnCreateAccount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(162)))), ((int)(((byte)(184)))));
+            this.btnCreateAccount.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCreateAccount.Location = new System.Drawing.Point(119, 88);
             this.btnCreateAccount.Name = "btnCreateAccount";
-            this.btnCreateAccount.Size = new System.Drawing.Size(200, 23);
+            this.btnCreateAccount.Size = new System.Drawing.Size(200, 26);
             this.btnCreateAccount.TabIndex = 4;
             this.btnCreateAccount.Text = "Create Account";
-            this.btnCreateAccount.UseVisualStyleBackColor = true;
+            this.btnCreateAccount.UseVisualStyleBackColor = false;
             this.btnCreateAccount.Click += new System.EventHandler(this.btnCreateAccount_Click);
             // 
             // txtPassword
@@ -332,7 +350,7 @@ namespace VDStore.Forms
             this.txtPassword.Location = new System.Drawing.Point(119, 62);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(200, 20);
+            this.txtPassword.Size = new System.Drawing.Size(200, 21);
             this.txtPassword.TabIndex = 3;
             // 
             // lblPassword
@@ -340,7 +358,7 @@ namespace VDStore.Forms
             this.lblPassword.AutoSize = true;
             this.lblPassword.Location = new System.Drawing.Point(18, 65);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(56, 13);
+            this.lblPassword.Size = new System.Drawing.Size(64, 15);
             this.lblPassword.TabIndex = 2;
             this.lblPassword.Text = "Password:";
             // 
@@ -348,7 +366,7 @@ namespace VDStore.Forms
             // 
             this.txtUsername.Location = new System.Drawing.Point(119, 27);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(200, 20);
+            this.txtUsername.Size = new System.Drawing.Size(200, 21);
             this.txtUsername.TabIndex = 1;
             // 
             // lblUsername
@@ -356,18 +374,20 @@ namespace VDStore.Forms
             this.lblUsername.AutoSize = true;
             this.lblUsername.Location = new System.Drawing.Point(18, 30);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(58, 13);
+            this.lblUsername.Size = new System.Drawing.Size(68, 15);
             this.lblUsername.TabIndex = 0;
             this.lblUsername.Text = "Username:";
             // 
             // btnExportCsv
             // 
+            this.btnExportCsv.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnExportCsv.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExportCsv.Location = new System.Drawing.Point(804, 39);
             this.btnExportCsv.Name = "btnExportCsv";
-            this.btnExportCsv.Size = new System.Drawing.Size(120, 23);
+            this.btnExportCsv.Size = new System.Drawing.Size(120, 25);
             this.btnExportCsv.TabIndex = 2;
             this.btnExportCsv.Text = "Export to CSV";
-            this.btnExportCsv.UseVisualStyleBackColor = true;
+            this.btnExportCsv.UseVisualStyleBackColor = false;
             this.btnExportCsv.Click += new System.EventHandler(this.BtnExportCsv_Click);
             // 
             // EmployeeForm

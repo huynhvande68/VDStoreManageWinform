@@ -74,6 +74,7 @@ namespace VDStore.Forms
             this.grpProductInfo.Controls.Add(this.lblName);
             this.grpProductInfo.Controls.Add(this.txtID);
             this.grpProductInfo.Controls.Add(this.lblID);
+            this.grpProductInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpProductInfo.Location = new System.Drawing.Point(12, 12);
             this.grpProductInfo.Name = "grpProductInfo";
             this.grpProductInfo.Size = new System.Drawing.Size(376, 248);
@@ -90,7 +91,7 @@ namespace VDStore.Forms
             0,
             0});
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(120, 20);
+            this.txtQuantity.Size = new System.Drawing.Size(120, 21);
             this.txtQuantity.TabIndex = 11;
             // 
             // txtPrice
@@ -103,7 +104,7 @@ namespace VDStore.Forms
             0,
             0});
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(120, 20);
+            this.txtPrice.Size = new System.Drawing.Size(120, 21);
             this.txtPrice.TabIndex = 10;
             // 
             // lblQuantity
@@ -111,7 +112,7 @@ namespace VDStore.Forms
             this.lblQuantity.AutoSize = true;
             this.lblQuantity.Location = new System.Drawing.Point(18, 206);
             this.lblQuantity.Name = "lblQuantity";
-            this.lblQuantity.Size = new System.Drawing.Size(49, 13);
+            this.lblQuantity.Size = new System.Drawing.Size(54, 15);
             this.lblQuantity.TabIndex = 9;
             this.lblQuantity.Text = "Quantity:";
             // 
@@ -120,7 +121,7 @@ namespace VDStore.Forms
             this.lblPrice.AutoSize = true;
             this.lblPrice.Location = new System.Drawing.Point(18, 171);
             this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(34, 13);
+            this.lblPrice.Size = new System.Drawing.Size(38, 15);
             this.lblPrice.TabIndex = 8;
             this.lblPrice.Text = "Price:";
             // 
@@ -137,7 +138,7 @@ namespace VDStore.Forms
             this.lblDescription.AutoSize = true;
             this.lblDescription.Location = new System.Drawing.Point(18, 104);
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(63, 13);
+            this.lblDescription.Size = new System.Drawing.Size(72, 15);
             this.lblDescription.TabIndex = 4;
             this.lblDescription.Text = "Description:";
             // 
@@ -145,7 +146,7 @@ namespace VDStore.Forms
             // 
             this.txtName.Location = new System.Drawing.Point(119, 65);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(237, 20);
+            this.txtName.Size = new System.Drawing.Size(237, 21);
             this.txtName.TabIndex = 3;
             // 
             // lblName
@@ -153,7 +154,7 @@ namespace VDStore.Forms
             this.lblName.AutoSize = true;
             this.lblName.Location = new System.Drawing.Point(18, 68);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.Size = new System.Drawing.Size(44, 15);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Name:";
             // 
@@ -162,7 +163,7 @@ namespace VDStore.Forms
             this.txtID.Location = new System.Drawing.Point(119, 31);
             this.txtID.Name = "txtID";
             this.txtID.ReadOnly = true;
-            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.Size = new System.Drawing.Size(100, 21);
             this.txtID.TabIndex = 1;
             // 
             // lblID
@@ -170,7 +171,7 @@ namespace VDStore.Forms
             this.lblID.AutoSize = true;
             this.lblID.Location = new System.Drawing.Point(18, 34);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(21, 13);
+            this.lblID.Size = new System.Drawing.Size(22, 15);
             this.lblID.TabIndex = 0;
             this.lblID.Text = "ID:";
             // 
@@ -180,6 +181,7 @@ namespace VDStore.Forms
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpProductList.Controls.Add(this.dgvProducts);
+            this.grpProductList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpProductList.Location = new System.Drawing.Point(394, 80);
             this.grpProductList.Name = "grpProductList";
             this.grpProductList.Size = new System.Drawing.Size(577, 468);
@@ -193,12 +195,12 @@ namespace VDStore.Forms
             this.dgvProducts.AllowUserToDeleteRows = false;
             this.dgvProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProducts.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvProducts.Location = new System.Drawing.Point(3, 16);
+            this.dgvProducts.Location = new System.Drawing.Point(3, 17);
             this.dgvProducts.MultiSelect = false;
             this.dgvProducts.Name = "dgvProducts";
             this.dgvProducts.ReadOnly = true;
             this.dgvProducts.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvProducts.Size = new System.Drawing.Size(571, 449);
+            this.dgvProducts.Size = new System.Drawing.Size(571, 448);
             this.dgvProducts.TabIndex = 0;
             this.dgvProducts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProducts_CellClick);
             // 
@@ -207,6 +209,7 @@ namespace VDStore.Forms
             this.grpSearch.Controls.Add(this.btnSearch);
             this.grpSearch.Controls.Add(this.txtSearch);
             this.grpSearch.Controls.Add(this.lblSearch);
+            this.grpSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpSearch.Location = new System.Drawing.Point(394, 12);
             this.grpSearch.Name = "grpSearch";
             this.grpSearch.Size = new System.Drawing.Size(394, 62);
@@ -228,7 +231,7 @@ namespace VDStore.Forms
             // 
             this.txtSearch.Location = new System.Drawing.Point(84, 29);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(223, 20);
+            this.txtSearch.Size = new System.Drawing.Size(223, 21);
             this.txtSearch.TabIndex = 1;
             // 
             // lblSearch
@@ -236,48 +239,55 @@ namespace VDStore.Forms
             this.lblSearch.AutoSize = true;
             this.lblSearch.Location = new System.Drawing.Point(6, 32);
             this.lblSearch.Name = "lblSearch";
-            this.lblSearch.Size = new System.Drawing.Size(71, 13);
+            this.lblSearch.Size = new System.Drawing.Size(81, 15);
             this.lblSearch.TabIndex = 0;
             this.lblSearch.Text = "Search Term:";
             // 
             // btnNew
             // 
+            this.btnNew.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnNew.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnNew.Location = new System.Drawing.Point(15, 281);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(75, 23);
             this.btnNew.TabIndex = 3;
             this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnSave
             // 
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnSave.Location = new System.Drawing.Point(104, 281);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 4;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDelete
             // 
+            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnDelete.Location = new System.Drawing.Point(196, 281);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(75, 23);
             this.btnDelete.TabIndex = 5;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
+            this.btnClear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(108)))), ((int)(((byte)(117)))), ((int)(((byte)(125)))));
             this.btnClear.Location = new System.Drawing.Point(286, 281);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(75, 23);
             this.btnClear.TabIndex = 6;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // grpProductImage
@@ -285,6 +295,7 @@ namespace VDStore.Forms
             this.grpProductImage.Controls.Add(this.lblImagePath);
             this.grpProductImage.Controls.Add(this.btnBrowseImage);
             this.grpProductImage.Controls.Add(this.picProductImage);
+            this.grpProductImage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpProductImage.Location = new System.Drawing.Point(12, 315);
             this.grpProductImage.Name = "grpProductImage";
             this.grpProductImage.Size = new System.Drawing.Size(376, 230);
@@ -297,18 +308,19 @@ namespace VDStore.Forms
             this.lblImagePath.AutoSize = true;
             this.lblImagePath.Location = new System.Drawing.Point(119, 201);
             this.lblImagePath.Name = "lblImagePath";
-            this.lblImagePath.Size = new System.Drawing.Size(95, 13);
+            this.lblImagePath.Size = new System.Drawing.Size(110, 15);
             this.lblImagePath.TabIndex = 2;
             this.lblImagePath.Text = "No image selected";
             // 
             // btnBrowseImage
             // 
+            this.btnBrowseImage.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.btnBrowseImage.Location = new System.Drawing.Point(119, 175);
             this.btnBrowseImage.Name = "btnBrowseImage";
             this.btnBrowseImage.Size = new System.Drawing.Size(200, 23);
             this.btnBrowseImage.TabIndex = 1;
             this.btnBrowseImage.Text = "Browse Image...";
-            this.btnBrowseImage.UseVisualStyleBackColor = true;
+            this.btnBrowseImage.UseVisualStyleBackColor = false;
             this.btnBrowseImage.Click += new System.EventHandler(this.btnBrowseImage_Click);
             // 
             // picProductImage
@@ -323,12 +335,14 @@ namespace VDStore.Forms
             // 
             // btnExportCsv
             // 
+            this.btnExportCsv.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.btnExportCsv.ForeColor = System.Drawing.Color.Black;
             this.btnExportCsv.Location = new System.Drawing.Point(804, 39);
             this.btnExportCsv.Name = "btnExportCsv";
             this.btnExportCsv.Size = new System.Drawing.Size(120, 23);
             this.btnExportCsv.TabIndex = 2;
             this.btnExportCsv.Text = "Export to CSV";
-            this.btnExportCsv.UseVisualStyleBackColor = true;
+            this.btnExportCsv.UseVisualStyleBackColor = false;
             this.btnExportCsv.Click += new System.EventHandler(this.BtnExportCsv_Click);
             // 
             // ProductForm
